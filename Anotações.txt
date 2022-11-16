@@ -1,0 +1,72 @@
+Mostrar na tela:
+print('Informação')
+
+Variáveis:
+As variáveis não precisam do tipo
+Ex: num = 10; num = "uma string"
+num1=num2=res=0
+Para deixar uma variável local como global, coloca o global antes da variável e na outra linha atribuir o valor. 
+Ex: global numero
+numero = 1
+
+Comentários:
+# uma linha
+"""Comentários de múltiplas linhas"""
+
+Tipos:
+int, str, float, bool, complex, list, dict
+Para saber o tipo: type(x)
+
+Coleções em geral:
+No python, o array simples é chamado de Lista. Em uma lista podemos ter vários tipos
+x = ['carro','moto', True, 1.17]
+parecido com a lista, temos a tupla, que a diferença é que os elementos não podem ser alterados.
+x = ('carro','moto', True, 1.17)
+x = range(0, 100, 1) - cria uma lista de 0 ate 100, de um em um
+Dicionários: Par chave valor
+x = {
+    'carro':'celta',
+    'Ano':'2012'
+}
+print(x['carro'])
+Set:
+x = {5,7,4,5,7,4,8} #Não repete os valores
+x = frozenset({5,7,4,5,7,4,8}) #congela o set
+
+Tipos numéricos:
+num_i = 10 #int
+num_f = 5.2 #float
+num_c = 1j #complex
+
+Casting:
+int(num_f) #passa para inteiro
+
+Random:
+import random
+num_r = random.randrange(0,59) # sortear um numero entre 0 e 59
+
+Manipulação de Strings:
+São Arrays de caracteres
+curso = 'Curso de Python'
+print(curso[0])
+print(curso[0:4]) #Printa da posição 0 até a posição 4
+print('Tamanho' , len(curso) )#Para saber o tamanho
+print(curso.strip() )#Tira os espaços no inicio e no fim
+print(curso.lower()) #Minusculo
+print(curso.upper()) #Maiúsculo
+print(curso.replace('Python', 'Java')) #Substitui
+a = curso.split(' ') #Divide aonde encontrar o espaço e adiciona em uma lista
+print(a[0])
+res = 'Python' in curso #Tem python em curso?
+print(res)
+res = 'Python' not in curso #Python não está em curso?
+print(res)
+
+formatação (scapes):
+\n # quebra de linha
+\" # Imprime "
+\t # tabulação
+
+Format em Strings (place holders):
+data = '{}, {} de {} de {}'
+print(data.format(cidade, dia, mes, ano))
