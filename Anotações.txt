@@ -70,3 +70,14 @@ formatação (scapes):
 Format em Strings (place holders):
 data = '{}, {} de {} de {}'
 print(data.format(cidade, dia, mes, ano))
+
+Boolean/Bool 
+aula = True
+aula = 10>15
+Strings vazias ou com 0 retornam False, e preenchidas, retornam True
+if aula: #Vê se tem conteúdo na variável 
+    print('Possui Texto')
+else:
+    print('Vazio')
+
+Coleção List 
