@@ -70,6 +70,8 @@ formatação (scapes):
 Format em Strings (place holders):
 data = '{}, {} de {} de {}'
 print(data.format(cidade, dia, mes, ano))
+print(f'Operação: {a} {op} {b} = {res}') #f-strings
+
 
 Boolean/Bool 
 aula = True
@@ -80,4 +82,65 @@ if aula: #Vê se tem conteúdo na variável
 else:
     print('Vazio')
 
-Coleção List 
+Coleção List:
+carros = ['Hrv','Golf','Argo','Focus']
+carros.append('Fit')#add
+carros.append('Fusion')
+carros.append('Polo')
+print(carros)
+print(carros[0])
+print(carros[-1])#O último elemento
+print(carros[-2])#O penúltimo elemento
+print(len(carros))#qtd
+carros.remove('Fusion')
+carros.pop()#Remove o último
+del carros[2]#remover pelo índice
+carros2 = list(carros)#copiar a lista
+carros3 = ['Fusca','147','uno']
+carros4 = carros+carros3#juntando listas
+
+Condicionais:
+a = 10
+b = 5
+res = 0
+op = '/'
+if op == '-':
+    res = a-b
+elif op == '+':
+    res = a+b
+elif op == '*':
+    res = a*b
+elif op == '/':
+    res = a/b
+else:
+    print("Digite um operador válido!")
+print(f'Operação: {a} {op} {b} = {res}')
+print("fim do programa")
+
+And e Or:
+clima = 'sol'
+dinheiro = 650
+lugar = ''
+if clima=='sol' or (dinheiro>300 and dinheiro<= 500): #O dinheiro tem que estar nessa faixa
+    lugar = 'clube'
+else:
+    lugar = 'cinema'
+print(f'Vou ao {lugar}!')
+
+For:
+carros = ['HRV','GOLF','ARGO','FOCUS']
+for elemento in carros:
+    print(elemento)
+    if elemento == 'GOLF':
+        print('\tVW')
+Uso 2:
+for letra in 'cfb-cursos':
+    print(letra)
+Uso 3:
+carros = ['HRV','GOLF','ARGO','FOCUS','FIT','FUSION','POLO']
+for elemento in carros:
+    print(elemento)
+    if elemento == 'FIT':
+        break
+
+input:
