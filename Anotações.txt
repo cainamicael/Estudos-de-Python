@@ -146,3 +146,7 @@ for elemento in carros:
 input:
 nome = input('Digite o seu nome: ')
 print('Nome digitado' + nome)
+num1 = int(input("Digite o primeiro valor: "))# Tem q ter o casting
+num2 = int(input("Digite o segunto valor.: "))
+res = num1 + num2
+print(f'A soma dos valores é: {res}')
