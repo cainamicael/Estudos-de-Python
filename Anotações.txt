@@ -150,3 +150,102 @@ num1 = int(input("Digite o primeiro valor: "))# Tem q ter o casting
 num2 = int(input("Digite o segunto valor.: "))
 res = num1 + num2
 print(f'A soma dos valores é: {res}')
+
+While:
+i = 0
+while i<10:
+    print(i)
+    i+=1
+    if i>=5:
+        break
+print('fim do loop')
+ex2:
+carros = ['hrv','golf','argo','onix','focus']
+tam = len(carros)
+i = 0
+while i<tam:
+    print(carros[i])
+    i+=1
+print('fim do loop')
+
+Tuplas:
+É semelhante a lista, sendo que não suporta adição nem modificação de itens
+t_carros = ('hrv','golf','argo')
+Convertendo tupla em lista: 
+l_carros = list(t_carros)
+Convertendo lista em tupla:
+t_carros = tuple(l_carros)
+Gambiarra para alterar valor de tupla:
+t_carros = ('hrv','golf','argo')
+l_carros = list(t_carros)
+l_carros[2] = 'focus'
+t_carros = tuple(l_carros)
+
+Matrizes:
+carros = [
+    ['modelo','hrv'],
+    ['fabricante','honda'],
+    ['ano','2016']
+]
+for l,c in carros:
+    print(f'Linha: {l} | Coluna: {c}\n')
+ex2:
+matriz = [[0,0,0],[0,0,0],[0,0,0]]
+for linha in range (0,3):
+    for coluna in range(0,3):
+        matriz[linha][coluna] = int(input(f'Digite o valor da posição [{linha}][{coluna}]: '))
+for linha in matriz:
+    print(linha)
+
+Dictionary:
+carro = {
+    'fabricante':'honda',
+    'modelo':'hrv', 
+    'ano' : '2016', 
+    'cor':'prata'
+}#chave / valor
+fab = carro.get('fabricante')# forma 1 - retorna honda
+print(carro['modelo']) # forma 2 - retorna hrv
+carro.pop('ano') # remove esse atributo
+print(fab)
+carro['cor'] = 'Preto' # serve para alterar e adicionar valor
+print(carro['cor'])
+for x in carro:
+    print(x) # só as chaves
+    print(carro[x]) # só os valores
+ou:
+for c,v in carro.items():
+    print(f'Chave: {c} | Valor: {v}')
+uso 2:
+carros = {
+    'Carro1' : {
+        'Fabricante' : 'honda',
+        'Modelo' : 'hrv'
+    },
+    'Carro2' : {
+        'Fabricante' : 'Volksvagen',
+        'Modelo' : 'golf'
+    },
+    'Carro3' : {
+        'Fabricante' : 'ford',
+        'Modelo' : 'focus'
+    }
+}
+print(carros['Carro1']['Fabricante']) #f1
+print(carros.get('Carro2').get('Modelo')) #f2
+
+Game de adivinhação com sorteio:
+import random
+import os
+erros = 0
+sorteado = random.randrange(0,100)
+jogador = int(input('Digite seu numero: '))
+while sorteado != jogador :
+    os.system('cls')
+    if sorteado > jogador :
+        print('Erro, o número é maior')
+    elif sorteado < jogador:
+        print('Erro, o número é menor')
+    erros += 1
+    jogador = int(input('Digite seu numero: '))
+print(f'Número: {str(jogador)} | Você acertou depois de {int(erros+1)} tentativas!')
