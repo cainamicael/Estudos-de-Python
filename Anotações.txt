@@ -305,3 +305,15 @@ def somar (lista):
     return s 
 resultado = somar(valores)
 print(resultado)
+
+Funções Lambda(Funções simples, anônimas e curtas):
+lambda arg:expr #sintaxe
+soma = lambda a,b : a+b
+soma(2, 5)
+uso 2:
+(lambda a,b : a + b)(3, 2)
+print((lambda a,b : a + b)(3, 2))
+ex 2:
+r = lambda x, func : x + func(x)
+res = r(2, lambda x : x*x)
+print(res)
