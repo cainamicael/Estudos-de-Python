@@ -249,3 +249,50 @@ while sorteado != jogador :
     erros += 1
     jogador = int(input('Digite seu numero: '))
 print(f'Número: {str(jogador)} | Você acertou depois de {int(erros+1)} tentativas!')
+
+Funções:
+n1 = 10
+n2 = 5
+def somar():
+    r = n1 + n2
+    print(f'{n1} + {n2} = {r}')
+def subtrair():
+    r = n1 - n2
+    print(f'{n1} - {n2} = {r}')
+def calculos():
+    somar()
+    subtrair()
+calculos() #chamando a função
+Função com parâmetros:
+def somar(n1, n2):
+    r = n1 + n2
+    print(f'{n1} + {n2} = {r}')
+somar(5, 7)
+Funções com Argumentos Arbitrários:
+Para especificar um número diferente de parâmetros
+def textos(*t): #Ou posso usar uma lista
+    print(t[0])
+    print(t[1])
+    print(t[2])
+textos('CFB cursos', 'Python', 'canal', 'curso', 'computador')
+Uso 2:
+def textos(*txt):
+    for t in txt: #printa cada argumento
+        print(t)
+textos('CFB cursos', 'Python', 'canal', 'curso', 'computador')
+textos('CFB cursos', 'Python', 'canal')
+textos('CFB cursos', 'Python')
+textos('Aula')
+ex 2:
+def somar(*num):
+    soma = 0
+    for n in num:
+        soma += n
+    print(soma)
+somar(5, 7, 3, 2)
+somar(2, 20, 80)
+somar(1, 2)
+Argumentos com valores padrões:
+def carro(c = 'Golf'):
+    print(f'O modelo do carro é: {c}')
+# Caso eu não passe argumento, o carro por padrão é Golf.
