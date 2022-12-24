@@ -296,3 +296,12 @@ Argumentos com valores padrões:
 def carro(c = 'Golf'):
     print(f'O modelo do carro é: {c}')
 # Caso eu não passe argumento, o carro por padrão é Golf.
+Retorno:
+valores = [1, 2, 3, 4, 5]
+def somar (lista):
+    s = 0
+    for numero in lista:
+        s += numero
+    return s 
+resultado = somar(valores)
+print(resultado)
