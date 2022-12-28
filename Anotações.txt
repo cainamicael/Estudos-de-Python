@@ -433,3 +433,38 @@ if not type(num) is int: #comparação de tipos
     raise Exception('Somente numeros permitidos') #cria a excessão
 else:
     print(num)
+
+Menu como função:
+ret = menu()
+while ret < 7 :
+    if ret == 1 :
+        novoCarro()
+    elif ret == 2 :
+        informacoes()
+    elif ret == 3 :
+        excluirCarro()
+    elif ret == 4 :
+        ligarCarro()
+    elif ret == 5 :
+        desligarCarro()
+    elif ret == 6 :
+        listarCarro()
+    ret = menu()
+os.system('cls') or None
+print('programa finalizado') #Aula 27 e 28
+
+Iteratos's:
+carros = ['Hrv', 'Polo', 'Jetta', 'Cruze', 'Fusion']
+itCarros = iter(carros) # __iter__ __next__
+print(next(itCarros))
+print(next(itCarros))#Cada um vai ser um carro diferente
+...
+uso 2:
+carros = ['Hrv', 'Polo', 'Jetta', 'Cruze', 'Fusion', 'Golf', 'Focus', 'Onix', 'Fit']
+itCarros = iter(carros) # __iter__ __next__
+while itCarros:
+    try:
+        print(next(itCarros))
+    except StopIteration:
+        print('Fim da Lista')
+        break
