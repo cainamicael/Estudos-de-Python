@@ -639,8 +639,12 @@ tam = pf-pi
 print(res.start())#método para a posição inicial
 print(res.end())#método para a posição final
 print(tam) #tamanho da palavra
-
-
+Split:
+import re
+texto = 'Curso de Python do CFB Cursos, canal do Youtube'
+res = re.split(' ',texto) #no lugar do espaço pode ser \s  - Faz um corte toda vez que encontra um espaço, e cria uma lista
+print(res) #retorna ['Curso', 'de', 'Python', 'do', 'CFB', 'Cursos,', 'canal', 'do', 'Youtube']
+print(f'O texto tem {len(res)} palavras')
 
 
 
