@@ -616,6 +616,33 @@ for x in jogador['mochila']:
 for x in jogador['aeronaves']:
     print(str(x['tipo']) + ' : ' + str(x['habilidade']))
 
+Expressões regulares:
+Findall:
+#Retorna uma lista de ocorrencias da palavra ou sílaba de uma string
+import re #RegEx
+texto = 'Curso de Python do CFB Cursos, canal do youtube'
+res = re.findall('so', texto) # procura a sílaba 'so' em texto
+print(res) # retorna ['so','so']
+Search (relacionado aos caracteres):
+import re
+texto = 'Curso de Python do CFB Cursos, canal do Youtube'
+res = re.search('Curso',texto)#Retorna a posição da primeira ocorrencia que a gente encontrar. Podemos dizer se queremos inicial ou final
+print(res.start())#método para a posição inicial
+print(res.end())#método para a posição final
+Uso 2:
+import re
+texto = 'Curso de Python do CFB Cursos, canal do Youtube'
+res = re.search('Python',texto)#Retorna a posição da primeira ocorrencia que a gente encontrar. Podemos dizer se queremos inicial ou final
+pi = res.start()
+pf = res.end()
+tam = pf-pi
+print(res.start())#método para a posição inicial
+print(res.end())#método para a posição final
+print(tam) #tamanho da palavra
+
+
+
+
 
 
 
