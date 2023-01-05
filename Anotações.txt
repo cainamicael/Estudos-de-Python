@@ -645,6 +645,11 @@ texto = 'Curso de Python do CFB Cursos, canal do Youtube'
 res = re.split(' ',texto) #no lugar do espaço pode ser \s  - Faz um corte toda vez que encontra um espaço, e cria uma lista
 print(res) #retorna ['Curso', 'de', 'Python', 'do', 'CFB', 'Cursos,', 'canal', 'do', 'Youtube']
 print(f'O texto tem {len(res)} palavras')
+Sub:
+import re
+texto = 'Curso de Python do CFB Cursos, canal do Youtube'
+res = re.sub(',','.',texto)# quero substituir toda vírgula por ponto
+print(res)
 
 
 
