@@ -651,13 +651,72 @@ texto = 'Curso de Python do CFB Cursos, canal do Youtube'
 res = re.sub(',','.',texto)# quero substituir toda vírgula por ponto
 print(res)
 
-
-
-
-
-
-
-
-
-
-
+Arquivos:
+Abertura, criação e escrita:
+nome = 'teste.txt'
+f = open('C:/Users/cmcai/Documents/GitHub/Estudos de Python/Estudos-de-Python/Aulas/Aula44/'+nome, 'wt') #(t é text, posso omitir)No segundo parâmetro posso passar:
+"""
+r - read (leitura)
+a - append (anexar ao final)
+w - write (escrita) - se não existir, ele cria e já abre para a escrita. Ele sobrescreve o que ja existia
+x - create (criar)
+t - text (texto) - já é o padrão
+b - bynary (binário)
+"""
+f.write('CFB Cursos') # escrevendo dentro do arquivo - Pode ser um input
+f.write('\nCurso de Python') # escrevendo dentro do arquivo
+f.close()#Lembrar de fechar no final
+Adicionando mais informação:
+nome = 'teste.txt'
+f = open('C:/Users/cmcai/Documents/GitHub/Estudos de Python/Estudos-de-Python/Aulas/Aula44/'+nome, 'at') #(t é text, posso omitir)No segundo parâmetro posso passar:
+"""
+r - read (leitura)
+a - append (anexar ao final)
+w - write (escrita) - se não existir, ele cria e já abre para a escrita. Ele sobrescreve o que ja existia
+x - create (criar)
+t - text (texto) - já é o padrão
+b - bynary (binário)
+"""
+txt = input('Digite um texto: ')
+f.write(txt + '\n') # escrevendo dentro do arquivo
+f.close()#Lembrar de fechar no final
+Leitura:
+f = open('C:/Users/cmcai/Documents/GitHub/Estudos de Python/Estudos-de-Python/Aulas/Aula45/teste.txt', 'rt')
+r = f.read()
+print(r)
+f.close()
+Observações:
+f.read(11) #Lê os 11 primeiros caraceres 
+r = f.readline() #Lê uma linha. Cada readline le uma linha diferente
+For na leitura:
+for l in f:
+    print(l)
+#imprime linha por linha
+Uso 2 do read:
+import re
+f = open('C:/Users/cmcai/Documents/GitHub/Estudos de Python/Estudos-de-Python/Aulas/Aula45/teste.txt', 'rt')
+res = re.sub(' ','-', f.readline())
+f.close()
+print(res)
+Deletando arquivos:
+import os
+nome = 'teste.txt'
+caminho = 'C:/Users/cmcai/Documents/GitHub/Estudos de Python/Estudos-de-Python/Aulas/Aula46/'
+f = open(caminho+nome,'x')
+f.close()
+os.remove(caminho+nome)#Deleta o arquivo
+Exemplo 2 deletee:
+import os
+nome = 'teste.txt'
+caminho = 'C:/Users/cmcai/Documents/GitHub/Estudos de Python/Estudos-de-Python/Aulas/Aula46/'
+if os.path.exists(caminho+nome): #ver se existe
+    print('Arquivo existente')
+else:
+    f = open(caminho+nome,'x')
+    f.close()
+    print('Arquivo criado')
+if os.path.exists(caminho+nome):
+    os.remove(caminho+nome)
+    print('Arquivo Removido')
+else:
+    print('Arquivo inexistente')
