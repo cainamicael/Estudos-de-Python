@@ -14,21 +14,21 @@ def conexaoBanco():
 
 vcon = conexaoBanco()
 
-#criar tabela
-vsql = """CREATE TABLE tb_contatos(
-                N_IDCONTATO INTEGER PRIMARY KEY AUTOINCREMENT,
-                T_NOMECONTATO VARCHAR(30),
-                T_TELEFONECONTATO VARCHAR(14),
-                T_EMAILCONTATO VARCHAR(30)
-        );""" #As 3 aspas servem para poder dar enter
+nome = input('Nome: ')
+telefone = input('Telefone: ')
+email = input('Email: ')
 
-def criarTabela(conexao, sql):
+vsql = f"INSERT INTO tb_contatos (T_NOMECONTATO, T_TELEFONECONTATO, T_EMAILCONTATO) VALUES('{nome}', '{telefone}', '{email}')" #O tipo de aspas tem q ser diferente dentro do comando
+
+
+def inserir(conexao, sql):
     try:
         c = conexao.cursor()
         c.execute(sql)
-        print('Tabela Criada')
+        conexao.commit() #É para manter o registro na tabela 
+        print('Registro inserido')
     except Error as ex:
         print(ex)
 
-criarTabela(vcon, vsql)
-vcon.close()
+inserir(vcon, vsql)
+
