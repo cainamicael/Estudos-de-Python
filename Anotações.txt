@@ -720,3 +720,43 @@ if os.path.exists(caminho+nome):
     print('Arquivo Removido')
 else:
     print('Arquivo inexistente')
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Banco de dados:
+No sqlite, adicionar um novo BD
+Criar tabela e adicionar colunas
+Criando conexão com o banco de dados e as tabelas:
