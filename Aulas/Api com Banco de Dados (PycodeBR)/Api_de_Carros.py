@@ -1,6 +1,5 @@
 import sqlite3
 from flask import Flask, make_response , jsonify, request
-from bd_fake import carros #Para usar o banco de dados fake 
 
 conexao = sqlite3.connect('C:\\Users\\cmcai\\Documents\\GitHub\\Estudos de Python\\Estudos-de-Python\\Aulas\\Banco\\bd_carros.db', check_same_thread=False) #Esse segundo parâmetro é para não dar o erro de thread
 
