@@ -1504,3 +1504,8 @@ btn.place(x=10, y=270, width=100, height=20)
 #
 app.mainloop()
 
+Limpando os campos do formulário:
+tb_nome.delete(0, END)
+tb_fone.delete(0, END)
+tb_email.delete(0, END)
+tb_obs.delete('1.0', END) #Pois é de múltiplas linhas
