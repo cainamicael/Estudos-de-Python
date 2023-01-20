@@ -3,6 +3,7 @@ from tkinter import *
 import os
 import banco
 
+print(x)
 def gravarDados():
     if tb_nome.get() != '':
         vnome = tb_nome.get()

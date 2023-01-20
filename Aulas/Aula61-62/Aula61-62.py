@@ -1,10 +1,14 @@
 #entrada de texto
 from tkinter import *
-import os
-import banco
 
 def semComando():
     print('')
+
+def novoContato():
+    exec(open('C:\\Users\\cmcai\\Documents\\GitHub\\Estudos de Python\\Estudos-de-Python\\Aulas\\Aula60\\Aula60.py').read(),{'x':10})
+    #Quando clicar em Novo, vai abrir o formulario que está neste arquivo
+    #Possoapassar parâmetros depois do read
+
 
 app = Tk()
 
@@ -17,7 +21,7 @@ menuContatos = Menu(barraDeMenus,tearoff=0) #pra tirar os ---------
 
 #submenus
 
-menuContatos.add_command(label='Novo',command=semComando)
+menuContatos.add_command(label='Novo',command=novoContato)
 menuContatos.add_command(label='Pesquisar',command=semComando)
 menuContatos.add_command(label='Deletar',command=semComando)
 menuContatos.add_separator()#Barra separadora
