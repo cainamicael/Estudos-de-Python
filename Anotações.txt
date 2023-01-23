@@ -1713,3 +1713,4 @@ btn_reset.pack()
 #
 app.mainloop()
 
+Frame:
