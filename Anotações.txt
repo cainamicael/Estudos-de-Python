@@ -1747,3 +1747,24 @@ btn_msg =Button(fr_quadro2, text='Mostrar Mensagem', command= mostrarMsg)#Para c
 btn_msg.place(x=10, y = 50)
 #
 app.mainloop()
+
+Label:
+lb_canal = Label(fr_quadro2, text='CFB Cursos', background='#008',foreground='#fff', font=('Arial',25))
+lb_canal.pack(side=LEFT, fill=X, expand=TRUE)
+
+PhotoImage(imagens tkinter):
+from tkinter import *
+import os
+#
+pastaApp = os.path.dirname(__file__)
+#
+app = Tk()
+app.title('CFB Cursos')
+app.geometry('600x500')
+#
+imgLogo = PhotoImage(file=pastaApp+"\\giphy.gif")
+l_logo = Label(app, image=imgLogo)
+l_logo.place(x=10, y=10)
+#
+app.mainloop()
+
